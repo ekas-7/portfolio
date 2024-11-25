@@ -7,7 +7,7 @@ export default function ProfileCard() {
   const [isFloating, setIsFloating] = useState(false)
 
   useEffect(() => {
-    setIsFloating(true)
+    setIsFloating(false)
   }, [])
 
   return (
@@ -21,15 +21,7 @@ export default function ProfileCard() {
           perspective: '1000px',
         }}
       >
-        <style jsx>{`
-          @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-          }
-          .animate-float {
-            animation: float 6s ease-in-out infinite;
-          }
-        `}</style>
+     
         <div className="absolute -inset-0.5 bg-gradient-to-r from-emerald-400 to-indigo-400 rounded-full opacity-60 group-hover:opacity-100 transition duration-500"></div>
         <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden transform transition-transform duration-300 ease-out group-hover:scale-105">
           <CardDemo />

@@ -1,0 +1,23 @@
+/* floating-animations.css */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.float {
+  animation: float 5s ease-in-out infinite;
+}
+
+/* Add a subtle hover effect */
+.float:hover {
+  animation-play-state: paused;
+  transition: transform 0.3s ease-in-out;
+  transform: scale(1.02);
+}
