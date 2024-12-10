@@ -1,3 +1,5 @@
+"use client"
+
 import { useState, useEffect } from "react";
 import { Terminal } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -36,7 +38,7 @@ export function BackgroundBoxesDemo() {
                 />
                 <WordRotate
                   className="text-xl font-bold text-white"
-                  words={["HI MY NAME IS", "CHKA CHKA","NAH I'D WIN"]}
+                  words={["HI MY NAME IS","NAH I'D WIN"]}
                 />
               </h2>
               <h1 className={cn(

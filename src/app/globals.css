@@ -6,8 +6,36 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Adding custom properties in the base layer */
 @layer base {
   :root {
-    --radius: 0.5rem;
+    --radius: 0.5rem; /* Custom border-radius variable */
+    --font-family-sans: Arial, Helvetica, sans-serif; /* Custom font-family variable */
+  }
+
+  /* You can also define global styles that use the custom properties */
+  body {
+    font-family: var(--font-family-sans);
+  }
+}
+
+/* Dark mode styles */
+@layer base {
+  /* Define dark mode styles */
+  html[data-theme='dark'] {
+    background-color: #1a202c;  /* Dark background */
+    color: white;               /* Light text */
+  }
+
+  /* Add any other dark mode specific styles, like link colors, etc. */
+  html[data-theme='dark'] a {
+    color: #63b3ed;  /* Light blue link in dark mode */
+  }
+}
+
+/* Custom utility for rounded corners using --radius */
+@layer utilities {
+  .rounded-custom {
+    border-radius: var(--radius);
   }
 }
